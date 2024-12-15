@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I includes -O3 --ffast-math
+CFLAGS = -Wall -Wextra -Werror -Imlx_linux -Iincludes -O3 --ffast-math
 #
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a
@@ -20,7 +20,8 @@ all: $(NAME)
 	@echo "Get ready to see some cool stuff"
 
 $(NAME): $(OFILES) $(LIB)
-	$(CC) $(OFILES) -L$(LIBDIR) -lft -lm -lmlx -o $(NAME)
+	@$(CC) $(OFILES) -L$(LIBDIR) -lft -Lmlx_linux\
+	-lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
 
 $(LIB):
 	make -C $(LIBDIR)
