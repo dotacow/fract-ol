@@ -1,10 +1,10 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Imlx_linux -Iincludes -O3 --ffast-math
-#
+CFLAGS = -Iincludes -O3 -ffast-math
+#-Wall -Wextra -Werror
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a
 #
-SRC = # TBD (-:
+SRC = test.c # TBD (-:
 #
 SRCS :=  $(addprefix srcs/,$(SRC))
 OFILES := $(addprefix ofiles/,$(SRC:.c=.o))
@@ -20,8 +20,8 @@ all: $(NAME)
 	@echo "Get ready to see some cool stuff"
 
 $(NAME): $(OFILES) $(LIB)
-	@$(CC) $(OFILES) -L$(LIBDIR) -lft -Lmlx_linux\
-	-lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz -o $(NAME)
+	@$(CC) $(OFILES) -L$(LIBDIR) -lft -lmlx \
+	-lXext -lX11 -lm -lz -o $(NAME)
 
 $(LIB):
 	make -C $(LIBDIR)
