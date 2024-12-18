@@ -9,5 +9,11 @@
 		"mlx_int.h": "c",
 		"math.h": "c",
 		"unistd.h": "c"
+	},
+	"[json]": {
+		"editor.quickSuggestions": {
+			"other": "inline",
+			"strings": "inline"
+		}
 	}
 }

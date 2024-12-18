@@ -1,10 +1,10 @@
 CC = cc
-CFLAGS = -Iincludes -O3 -ffast-math
-#-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Iincludes -O3 -ffast-math -g
+
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a
 #
-SRC = test.c # TBD (-:
+SRC = render.c init.c main.c
 #
 SRCS :=  $(addprefix srcs/,$(SRC))
 OFILES := $(addprefix ofiles/,$(SRC:.c=.o))
@@ -13,10 +13,10 @@ NAME = fractol
 
 #(-:
 
-ofiles/%.o: srcs/%.c includes/fract-ol.h | dirs
+ofiles/%.o: srcs/%.c | dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-all: $(NAME)
+all: dirs $(NAME)
 	@echo "Get ready to see some cool stuff"
 
 $(NAME): $(OFILES) $(LIB)
