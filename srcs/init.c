@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 17:31:38 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 20:35:38 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@ void malloc_fail(void)
 	exit(EXIT_FAILURE);
 }
 
-void	fractal_init(t_data *data)
+static void data_init(t_data *data)
 {
+	data->offset_x = 0;
+	data->offset_y = 0;
+	data->zoom = 1;
+	data->iter_ceil = 100;
+	data->escape_val = 4;
 	data->mlx = mlx_init();
 	if (!data->mlx)
 		malloc_fail();
@@ -30,6 +35,11 @@ void	fractal_init(t_data *data)
 		free(data->mlx);
 		malloc_fail();
 	}
+}
+
+void	fractal_init(t_data *data)
+{
+	data_init(data);
 	data->imgd.img = mlx_new_image(data->mlx, WIDTH, HEIGHT);
 	if (!data->imgd.img)
 	{
@@ -38,8 +48,16 @@ void	fractal_init(t_data *data)
 		free(data->mlx);
 		malloc_fail();
 	}
-	data->imgd.addr = mlx_get_data_addr(data->imgd.img, &data->imgd.bbp,
+	data->imgd.addr = mlx_get_data_addr(data->imgd.img, &data->imgd.bpp,
 		&data->imgd.llen, &data->imgd.endian);
+	if (!data->imgd.addr)
+	{
+		mlx_destroy_image(data->mlx, data->imgd.img);
+		mlx_destroy_window(data->mlx, data->win);
+		mlx_destroy_display(data->mlx);
+		free(data->mlx);
+		malloc_fail();
+	}
 	//events_init(data);
 	//data_init(data);
 }
