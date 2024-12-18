@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 21:04:37 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 21:18:43 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 static void data_init(t_data *data)
 {
-	data->offset_x = 0;
-	data->offset_y = 0;
 	data->zoom = 1;
 	data->iter_ceil = 416;
 	data->escape_val = 4;

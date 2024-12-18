@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/18 20:56:58 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 21:18:39 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ typedef struct s_data
 	void	*mlx;
 	void	*win;
 	t_img	imgd;
-	int		offset_x;
-	int		offset_y;
 	double	zoom;
 	int		iter_ceil;
 	double	escape_val;
