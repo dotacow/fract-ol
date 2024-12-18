@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 20:35:38 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 20:51:25 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void data_init(t_data *data)
 	data->offset_x = 0;
 	data->offset_y = 0;
 	data->zoom = 1;
-	data->iter_ceil = 100;
+	data->iter_ceil = 416;
 	data->escape_val = 4;
 	data->mlx = mlx_init();
 	if (!data->mlx)

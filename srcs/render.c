@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 20:26:53 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 20:46:06 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,8 @@ void	my_pixel_put(int x, int y, t_img *img, int color)
 
 void	fractal_render(t_data *data)
 {
-	int		color;
 	int		x;
 	int		y;
-	t_cnum	c;
 
 	y = -1;
 	while (++y < HEIGHT)

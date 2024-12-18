@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -Iincludes -O3 -ffast-math -g
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a
 #
-SRC = render.c init.c main.c
+SRC = math.c render.c init.c main.c
 #
 SRCS :=  $(addprefix srcs/,$(SRC))
 OFILES := $(addprefix ofiles/,$(SRC:.c=.o))
