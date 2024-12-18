@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/18 20:29:53 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 20:56:58 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ typedef struct s_data
 
 /*Initi and error handling*/
 void	fractal_init(t_data *data);
-void	malloc_fail(void);
+void	free_data(t_data *data);
 /*rendering*/
 void	fractal_render(t_data *data);
 void	my_pixel_put(int x, int y, t_img *img, int color);
