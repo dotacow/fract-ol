@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 18:12:04 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/19 19:28:41 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	fractal_render(t_data *data)
 	int	x;
 	int	y;
 
-	fprintf(stderr,"%lf current zoom",data->zoom);
 	y = -1;
 	while (++y < HEIGHT)
 	{
