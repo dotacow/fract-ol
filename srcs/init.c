@@ -12,7 +12,7 @@
 
 #include "../includes/fractol.h"
 
-static void data_init(t_data *data)
+static void	data_init(t_data *data)
 {
 	data->zoom = 1;
 	data->iter_ceil = 252;
@@ -36,7 +36,7 @@ void	fractal_init(t_data *data)
 	if (!data->imgd.img)
 		free_data(data);
 	data->imgd.addr = mlx_get_data_addr(data->imgd.img, &data->imgd.bpp,
-		&data->imgd.llen, &data->imgd.endian);
+			&data->imgd.llen, &data->imgd.endian);
 	if (!data->imgd.addr)
 		free_data(data);
 	my_hooks(data);

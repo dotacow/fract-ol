@@ -12,7 +12,7 @@
 
 #include "../includes/fractol.h"
 
-void free_data(t_data *data)
+void	free_data(t_data *data)
 {
 	if (data->imgd.img)
 		mlx_destroy_image(data->mlx, data->imgd.img);
@@ -22,7 +22,7 @@ void free_data(t_data *data)
 		mlx_destroy_display(data->mlx);
 	if (data->mlx)
 		free(data->mlx);
-	if (errno && errno != 11 )
+	if (errno && errno != 11)
 	{
 		perror("something bad happened. have fun debugging (p");
 		exit(EXIT_FAILURE);

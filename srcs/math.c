@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   math.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:44:58 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 14:05:12 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 17:13:05 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
 double	lin_intrp(double transform, double l1, double l2, double res)
-//linear interpolation, used to map pixel coordinates to complex plane
+// linear interpolation, used to map pixel coordinates to complex plane
 {
 	return (transform * (l2 - l1) / (res) + l1);
 }

@@ -51,8 +51,8 @@ void	my_pixel_put(int x, int y, t_img *img, int color)
 
 void	fractal_render(t_data *data)
 {
-	int		x;
-	int		y;
+	int	x;
+	int	y;
 
 	y = -1;
 	while (++y < HEIGHT)

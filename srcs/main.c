@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 14:35:55 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 17:12:47 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 int	main(int argc, char **argv)
 {
 	t_data	data;
-	if ((argc == 2 && !ft_strncmp(argv[1], "mandelbrot", 10))
-		|| (argc == 4 && !ft_strncmp(argv[1], "julia", 5)))
+
+	if ((argc == 2 && !ft_strncmp(argv[1], "mandelbrot", 10)) || (argc == 4
+			&& !ft_strncmp(argv[1], "julia", 5)))
 	{
 		if (!ft_strncmp(argv[1], "mandelbrot", 10))
 			data.fractal = MANDELBROT;
@@ -28,7 +29,8 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		perror("Usage: ./fractol mandelbrot OR ./fractol julia [real] [imaginary]");
+		perror("Usage: ./fractol mandelbrot");
+		perror("fractol julia [real] [imaginary]");
 		exit(EXIT_FAILURE);
 	}
 }

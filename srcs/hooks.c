@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   hooks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 15:19:15 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 17:12:04 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-void my_hooks(t_data *data)
+void	my_hooks(t_data *data)
 {
-	mlx_hook(data->win,KeyPress,KeyPressMask,key_press, data);
-	mlx_hook(data->win,ButtonPress,ButtonPressMask,mouse_press, data);
-	mlx_hook(data->win,DestroyNotify,StructureNotifyMask,exit_hook, data);
+	mlx_hook(data->win, KeyPress, KeyPressMask, key_press, data);
+	mlx_hook(data->win, ButtonPress, ButtonPressMask, mouse_press, data);
+	mlx_hook(data->win, DestroyNotify, StructureNotifyMask, exit_hook, data);
 }
 
 int	key_press(int keycode, t_data *data)
