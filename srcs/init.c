@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 21:18:43 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 15:17:51 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 static void data_init(t_data *data)
 {
 	data->zoom = 1;
-	data->iter_ceil = 416;
+	data->iter_ceil = 252;
 	data->escape_val = 4;
+	data->xl1 = -2;
+	data->xl2 = 2;
+	data->yl1 = 2;
+	data->yl2 = -2;
 }
 
 void	fractal_init(t_data *data)
@@ -35,5 +39,5 @@ void	fractal_init(t_data *data)
 		&data->imgd.llen, &data->imgd.endian);
 	if (!data->imgd.addr)
 		free_data(data);
-	//hooks_init(data);
+	my_hooks(data);
 }

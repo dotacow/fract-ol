@@ -6,17 +6,11 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 20:48:37 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 14:35:55 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-
-
-int	ARGB(int a, int r, int g, int b)
-{
-	return (a << 24 | r << 16 | g << 8 | b);
-}
 
 int	main(int argc, char **argv)
 {

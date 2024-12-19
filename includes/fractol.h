@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/18 21:18:39 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 15:00:17 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # include <unistd.h>
 # include "mlx.h"
 # include "colors.h"
+# include <X11/X.h>
+# include <X11/keysym.h>
 
 #define WIDTH 800
 #define HEIGHT 800
@@ -57,7 +59,10 @@ typedef struct s_data
 	double	zoom;
 	int		iter_ceil;
 	double	escape_val;
-
+	double	xl1;
+	double	xl2;
+	double	yl1;
+	double	yl2;
 }				t_data;
 
 /*Initi and error handling*/
@@ -68,11 +73,20 @@ void	fractal_render(t_data *data);
 void	my_pixel_put(int x, int y, t_img *img, int color);
 void	pixel_iter(t_data *data, int x, int y);
 /*color*/
-int		ARGB(int a, int r, int g, int b);
 /*🤓*/
 double	lin_intrp(double transform, double l1, double l2, double res);
 t_cnum	c_sqrd(t_cnum c);
 t_cnum	c_sum(t_cnum a, t_cnum b);
 double	c_mag(t_cnum c);
+/*events*/
+void	my_hooks(t_data *data);
+int		key_press(int keycode, t_data *data);
+int		mouse_press(int button, t_data *data);
+int		exit_hook(t_data *data);
+/* shift and zoom */
+void	shift_left(t_data *data);
+void	shift_right(t_data *data);
+void	shift_up(t_data *data);
+void	shift_down(t_data *data);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 20:10:38 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 20:16:07 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/18 21:21:32 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@
 #define DARK_BLUE	0x0066FF
 #define DARK_RED	0xFF3300
 #define DARK_GREEN	0x009933
+
+/*event masks*/
 
 #endif

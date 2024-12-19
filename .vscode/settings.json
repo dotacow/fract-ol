@@ -8,7 +8,10 @@
 		"mlx.h": "c",
 		"mlx_int.h": "c",
 		"math.h": "c",
-		"unistd.h": "c"
+		"unistd.h": "c",
+		"fractol.h": "c",
+		"ap_keysym.h": "c",
+		"eventi.h": "c"
 	},
 	"[json]": {
 		"editor.quickSuggestions": {

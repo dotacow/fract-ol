@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/18 20:46:06 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 14:56:13 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void	pixel_iter(t_data *data, int x, int y)
 
 	z.x = 0;
 	z.y = 0;
-	c.x = lin_intrp(x, -2,+2, WIDTH);
-	c.y = lin_intrp(y, +2,-2, HEIGHT);
+	c.x = lin_intrp(x, data->xl1, data->xl2, WIDTH);
+	c.y = lin_intrp(y, data->yl2, data->yl1, HEIGHT);
 	i = 0;
 	while (i < data->iter_ceil)
 	{
