@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/19 15:00:17 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 19:21:37 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ double	c_mag(t_cnum c);
 /*events*/
 void	my_hooks(t_data *data);
 int		key_press(int keycode, t_data *data);
-int		mouse_press(int button, t_data *data);
+int		mouse_press(int button, int x, int y, t_data *data);
 int		exit_hook(t_data *data);
 /* shift and zoom */
 void	shift_left(t_data *data);

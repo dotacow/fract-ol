@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 15:17:51 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/19 18:13:25 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	data_init(t_data *data)
 {
-	data->zoom = 1;
+	data->zoom = 1.000;
 	data->iter_ceil = 252;
 	data->escape_val = 4;
 	data->xl1 = -2;

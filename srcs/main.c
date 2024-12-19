@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 17:12:47 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/19 19:22:48 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
+		errno = EINVAL;
 		perror("Usage: ./fractol mandelbrot");
 		perror("fractol julia [real] [imaginary]");
 		exit(EXIT_FAILURE);

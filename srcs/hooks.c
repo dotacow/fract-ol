@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 17:12:04 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/19 19:24:28 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,13 @@ int	key_press(int keycode, t_data *data)
 	return (0);
 }
 
-int	mouse_press(int button, t_data *data)
+int	mouse_press(int button, int x, int y, t_data *data)
 {
+	(void)(x+ y);
 	if (button == 4)
-	{
 		data->zoom *= 1.1;
-		fractal_render(data);
-	}
 	else if (button == 5)
-	{
 		data->zoom /= 1.1;
-		fractal_render(data);
-	}
 	return (0);
 }
 
