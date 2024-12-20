@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes -O3
+CFLAGS = -Wall -Wextra -Werror -Iincludes -O3 -march=native
 
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a

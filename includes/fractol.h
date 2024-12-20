@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/20 13:41:01 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 16:46:54 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 
 #define WIDTH 800
 #define HEIGHT 800
+#define ITER_CEIL 52
 
 typedef struct s_img
 //image data
