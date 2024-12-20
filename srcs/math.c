@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:44:58 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 13:32:21 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 16:50:36 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ double	c_mag(t_cnum c)
 }
 
 double atodbl (char *s)
+// absolute abomnation of a function
 {
 	long	i;
 	double	f;
