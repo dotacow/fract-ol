@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 13:38:45 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 13:41:06 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	my_hooks(t_data *data)
 	mlx_hook(data->win, KeyPress, KeyPressMask, key_press, data);
 	mlx_hook(data->win, ButtonPress, ButtonPressMask, mouse_press, data);
 	mlx_hook(data->win, DestroyNotify, StructureNotifyMask, exit_hook, data);
-	mlx_hook(data->win, MotionNotify, PointerMotionMask, mouse_move, data);
+	/* mlx_hook(data->win, MotionNotify, PointerMotionMask, mouse_move, data); */
 }
 
 int	key_press(int keycode, t_data *data)
@@ -56,7 +56,7 @@ int	exit_hook(t_data *data)
 	free_data(data);
 	return (0);
 }
-
+/*
 int	mouse_move(int x, int y, t_data *data)
 {
 	(void)(x+y);
@@ -67,4 +67,4 @@ int	mouse_move(int x, int y, t_data *data)
 		fractal_render(data);
 	}
 	return (0);
-}
+} */

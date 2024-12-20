@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/20 13:39:27 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 13:41:01 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	my_hooks(t_data *data);
 int		key_press(int keycode, t_data *data);
 int		mouse_press(int button, int x, int y, t_data *data);
 int		exit_hook(t_data *data);
-int		mouse_move(int x, int y, t_data *data);
+/* int		mouse_move(int x, int y, t_data *data); */
 /* shift and zoom */
 void	shift_left(t_data *data);
 void	shift_right(t_data *data);
