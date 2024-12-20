@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   math.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 18:44:58 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 17:13:05 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/20 13:32:21 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,36 @@ double	c_mag(t_cnum c)
 // magnitude of a complex number
 {
 	return (c.x * c.x + c.y * c.y);
+}
+
+double atodbl (char *s)
+{
+	long	i;
+	double	f;
+	double	pow;
+	int		sign;
+
+	i = 0;
+	f = 0;
+	sign = 1;
+	pow = 1;
+	while ((*s >= 9 && *s <= 13) || 32 == *s)
+		s++;
+	while (*s == '-' || *s == '+')
+	{
+		if (*s == '-')
+			sign = -1;
+		s++;
+	}
+	while (*s != '.' && *s)
+		i = (i * 10) + (*s++ - '0');
+	if (*s == '.')
+		s++;
+	while (*s)
+	{
+		pow /= 10;
+		f = f + (*s - '0') * pow;
+		s++;
+	}
+	return ((double)(i + f) * sign);
 }

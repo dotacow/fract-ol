@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/19 19:21:37 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/20 13:39:27 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,17 @@ typedef struct s_data
 	void	*win;
 	t_img	imgd;
 	double	zoom;
-	int		iter_ceil;
+	double	iter_ceil;
 	double	escape_val;
 	double	xl1;
 	double	xl2;
 	double	yl1;
 	double	yl2;
+	t_cnum	z;
 }				t_data;
 
 /*Initi and error handling*/
-void	fractal_init(t_data *data);
+void	fractal_init(t_data *data, char **argv);
 void	free_data(t_data *data);
 /*rendering*/
 void	fractal_render(t_data *data);
@@ -78,11 +79,13 @@ double	lin_intrp(double transform, double l1, double l2, double res);
 t_cnum	c_sqrd(t_cnum c);
 t_cnum	c_sum(t_cnum a, t_cnum b);
 double	c_mag(t_cnum c);
+double atodbl (char *s);
 /*events*/
 void	my_hooks(t_data *data);
 int		key_press(int keycode, t_data *data);
 int		mouse_press(int button, int x, int y, t_data *data);
 int		exit_hook(t_data *data);
+int		mouse_move(int x, int y, t_data *data);
 /* shift and zoom */
 void	shift_left(t_data *data);
 void	shift_right(t_data *data);

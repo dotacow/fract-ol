@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -Iincludes -O3 -ffast-math -g
+CFLAGS = -Wall -Wextra -Werror -Iincludes -O3
 
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 19:22:48 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/20 12:43:24 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int	main(int argc, char **argv)
 			data.fractal = MANDELBROT;
 		else
 			data.fractal = JULIA;
-		fractal_init(&data);
+		fractal_init(&data,argv);
+		ft_printf("julia.x: %f\n", data.z.x);
+		ft_printf("julia.y: %f\n", data.z.y);
 		fractal_render(&data);
 		mlx_loop(data.mlx);
 	}

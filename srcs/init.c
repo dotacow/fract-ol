@@ -3,29 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/19 18:13:25 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/20 12:56:20 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static void	data_init(t_data *data)
+static void	data_init(t_data *data, char **argv)
 {
-	data->zoom = 1.000;
+	data->zoom = 1.00;
 	data->iter_ceil = 252;
-	data->escape_val = 4;
-	data->xl1 = -2;
-	data->xl2 = 2;
-	data->yl1 = 2;
-	data->yl2 = -2;
+	data->escape_val = 1000;
+	data->xl1 = -2.00;
+	data->xl2 = 2.00;
+	data->yl1 = 2.00;
+	data->yl2 = -2.00;
+	data->z.x = 0.00;
+	data->z.y = 0.00;
+	if (data->fractal == JULIA)
+	{
+		data->z.x = atodbl(argv[2]);
+		data->z.y = atodbl(argv[3]);
+	}
 }
 
-void	fractal_init(t_data *data)
+void	fractal_init(t_data *data, char **argv)
 {
-	data_init(data);
+	data_init(data, argv);
 	data->mlx = mlx_init();
 	if (!data->mlx)
 		free_data(data);
