@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 13:41:06 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 13:41:46 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int	exit_hook(t_data *data)
 	return (0);
 }
 /*
+dynamic zoom tbd;
 int	mouse_move(int x, int y, t_data *data)
 {
 	(void)(x+y);
