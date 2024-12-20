@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 12:56:20 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 13:53:53 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	data_init(t_data *data, char **argv)
 {
 	data->zoom = 1.00;
-	data->iter_ceil = 252;
+	data->iter_ceil = 52;
 	data->escape_val = 1000;
 	data->xl1 = -2.00;
 	data->xl2 = 2.00;

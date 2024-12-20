@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 13:27:42 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/20 14:28:12 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	pixel_iter(t_data *data, int x, int y)
 	double	i;
 	double	color;
 
-	z.x = lin_intrp(x, data->xl1, data->xl2, WIDTH) * data->zoom;
-	z.y = lin_intrp(y, data->yl2, data->yl1, HEIGHT) * data->zoom;
+	z.x = lin_intrp(x, data->xl1, data->xl2, WIDTH) / data->zoom;
+	z.y = lin_intrp(y, data->yl2, data->yl1, HEIGHT) / data->zoom;
 	pick_fractal(data, &c, &z);
 	i = 0;
 	while (i < data->iter_ceil)
