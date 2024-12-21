@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 13:43:23 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/21 19:14:30 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
+//bonus tbd:
+// dynamic zoom
+// extra fractal
+// better color shift
 int	main(int argc, char **argv)
 {
 	t_data	data;

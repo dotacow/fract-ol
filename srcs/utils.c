@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 20:54:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 18:45:10 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/21 19:13:26 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,5 @@ unsigned int	get_color(double t)
 	if (idx2 >= cindex)
 		idx2 = cindex - 1;
 	pixel = (t * (cindex - 1)) - idx1;
-	return (interpolate_color(pixel, colors[idx1], colors[idx1 + idx2]));
+	return (interpolate_color(pixel	, colors[idx1], colors[idx1 + idx2]));
 }
