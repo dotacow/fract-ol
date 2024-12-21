@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 12:43:24 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/21 13:43:23 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ int	main(int argc, char **argv)
 			data.fractal = MANDELBROT;
 		else
 			data.fractal = JULIA;
-		fractal_init(&data,argv);
-		ft_printf("julia.x: %f\n", data.z.x);
-		ft_printf("julia.y: %f\n", data.z.y);
+		fractal_init(&data, argv);
 		fractal_render(&data);
 		mlx_loop(data.mlx);
 	}

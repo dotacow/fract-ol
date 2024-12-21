@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 16:42:11 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/21 13:52:50 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,24 +29,28 @@ static	void	pick_fractal(t_data *data, t_cnum *c, t_cnum *z)
 		c->y = data->z.y;
 	}
 }
+
 void	pixel_iter(t_data *data, int x, int y)
 {
 	t_cnum	c;
 	t_cnum	z;
 	double	i;
-	double	color;
+	double	temp_x;
 
 	z.x = lin_intrp(x, data->xl1, data->xl2, WIDTH) / data->zoom;
 	z.y = lin_intrp(y, data->yl2, data->yl1, HEIGHT) / data->zoom;
+	c.x = 0;
+	c.y = 0;
 	pick_fractal(data, &c, &z);
 	i = 0;
 	while (i < data->iter_ceil)
 	{
-		z = c_sum(c_sqrd(z),c);
-		if (c_mag(z) > data->escape_val)
+		temp_x = z.x * z.x - z.y * z.y + c.x;
+		z.y = 2 * z.x * z.y + c.y;
+		z.x = temp_x;
+		if ((z.x * z.x + z.y * z.y) > data->escape_val * data->escape_val)
 		{
-			color = lin_intrp(i, BLACK, WHITE, data->iter_ceil);
-			my_pixel_put(x, y, &data->imgd, color);
+			my_pixel_put(x, y, &data->imgd, get_color(i / data->iter_ceil));
 			return ;
 		}
 		i++;

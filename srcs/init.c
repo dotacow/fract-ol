@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/20 16:42:31 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/21 13:47:55 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ static void	data_init(t_data *data, char **argv)
 	data->yl2 = -2.00;
 	data->z.x = 0.00;
 	data->z.y = 0.00;
+	data->shift.x = 0.00;
+	data->shift.y = 0.00;
 	if (data->fractal == JULIA)
 	{
 		data->z.x = atodbl(argv[2]);

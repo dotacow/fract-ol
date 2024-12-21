@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/20 16:46:54 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/21 13:47:42 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct s_data
 	void	*win;
 	t_img	imgd;
 	double	zoom;
+	t_cnum	shift;
 	double	iter_ceil;
 	double	escape_val;
 	double	xl1;
@@ -66,7 +67,6 @@ typedef struct s_data
 	double	yl2;
 	t_cnum	z;
 }				t_data;
-
 /*Initi and error handling*/
 void	fractal_init(t_data *data, char **argv);
 void	free_data(t_data *data);
@@ -75,6 +75,8 @@ void	fractal_render(t_data *data);
 void	my_pixel_put(int x, int y, t_img *img, int color);
 void	pixel_iter(t_data *data, int x, int y);
 /*color*/
+unsigned int	interpolate_color(double t, unsigned int c1, unsigned int c2);
+unsigned int	get_color(double t);
 /*🤓*/
 double	lin_intrp(double transform, double l1, double l2, double res);
 t_cnum	c_sqrd(t_cnum c);
