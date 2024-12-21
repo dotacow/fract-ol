@@ -6,15 +6,11 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 13:52:50 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/21 14:28:45 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
-
-// z = z^2 + c is the iteration formula
-// in julia, c is constant
-// in mandelbrot, z is constant(0)
 
 static	void	pick_fractal(t_data *data, t_cnum *c, t_cnum *z)
 {
