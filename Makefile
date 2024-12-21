@@ -13,7 +13,7 @@ NAME = fractol
 
 #(-:
 
-ofiles/%.o: srcs/%.c | dirs
+ofiles/%.o: srcs/%.c includes/fractol.h | dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: dirs $(NAME)

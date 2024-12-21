@@ -1,5 +1,7 @@
 {
 	"files.associations": {
-		"fractol.h": "c"
+		"*.c": "c",
+		"fractol.h": "c",
+		"colors.h": "c"
 	}
 }
