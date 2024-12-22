@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:50:43 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 18:12:28 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 19:24:40 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,10 @@ void	zoom_in(t_data *data, int x, int y)
 
 	mouse_x = lin_intrp(x, data->xl1, data->xl2, WIDTH);
 	mouse_y = lin_intrp(y, data->yl2, data->yl1, HEIGHT);
-	data->zoom *= 1.5;
-	data->xl1 = mouse_x - (mouse_x - data->xl1) / 1.5;
-	data->xl2 = mouse_x + (data->xl2 - mouse_x) / 1.5;
-	data->yl1 = mouse_y - (mouse_y - data->yl1) / 1.5;
-	data->yl2 = mouse_y + (data->yl2 - mouse_y) / 1.5;
+	data->xl1 = mouse_x - (mouse_x - data->xl1) / ZOOM;
+	data->xl2 = mouse_x + (data->xl2 - mouse_x) / ZOOM;
+	data->yl1 = mouse_y - (mouse_y - data->yl1) / ZOOM;
+	data->yl2 = mouse_y + (data->yl2 - mouse_y) / ZOOM;
 }
 
 void	zoom_out(t_data *data, int x, int y)
@@ -67,9 +66,8 @@ void	zoom_out(t_data *data, int x, int y)
 
 	mouse_x = lin_intrp(x, data->xl1, data->xl2, WIDTH);
 	mouse_y = lin_intrp(y, data->yl2, data->yl1, HEIGHT);
-	data->zoom /= 1.5;
-	data->xl1 = mouse_x - (mouse_x - data->xl1) * 1.5;
-	data->xl2 = mouse_x + (data->xl2 - mouse_x) * 1.5;
-	data->yl1 = mouse_y - (mouse_y - data->yl1) * 1.5;
-	data->yl2 = mouse_y + (data->yl2 - mouse_y) * 1.5;
+	data->xl1 = mouse_x - (mouse_x - data->xl1) * ZOOM;
+	data->xl2 = mouse_x + (data->xl2 - mouse_x) * ZOOM;
+	data->yl1 = mouse_y - (mouse_y - data->yl1) * ZOOM;
+	data->yl2 = mouse_y + (data->yl2 - mouse_y) * ZOOM;
 }

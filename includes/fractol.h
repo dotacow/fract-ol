@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/22 19:05:09 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 19:29:59 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define WIDTH 800
 # define HEIGHT 800
 # define ITER_CEIL 512
+# define ZOOM 1.5
 
 // image data
 typedef struct s_img
@@ -54,8 +55,6 @@ typedef struct s_data
 	void		*mlx;
 	void		*win;
 	t_img		imgd;
-	double		zoom;
-	t_cnum		shift;
 	double		iter_ceil;
 	double		escape_val;
 	double		xl1;

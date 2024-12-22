@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 19:09:37 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 19:38:43 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,6 @@ void	fractal_render(t_data *data)
 	int	x;
 	int	y;
 
-	printf("current iteration ceiling: %f\n", data->iter_ceil);
-	printf("Current zoom: %f\n", data->zoom);
 	y = -1;
 	if (data->fractal == MANDELBROT || data->fractal == JULIA)
 	{

@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 13:47:55 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 19:41:11 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 static void	data_init(t_data *data, char **argv)
 {
-	data->zoom = 1.00;
 	data->iter_ceil = ITER_CEIL;
-	data->escape_val = 1000;
+	data->escape_val = 42;
 	data->xl1 = -2.00;
 	data->xl2 = 2.00;
 	data->yl1 = 2.00;
 	data->yl2 = -2.00;
 	data->z.x = 0.00;
 	data->z.y = 0.00;
-	data->shift.x = 0.00;
-	data->shift.y = 0.00;
 	if (data->fractal == JULIA)
 	{
 		data->z.x = atodbl(argv[2]);
