@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 18:03:20 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 19:09:37 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,12 +70,15 @@ void	fractal_render(t_data *data)
 	printf("current iteration ceiling: %f\n", data->iter_ceil);
 	printf("Current zoom: %f\n", data->zoom);
 	y = -1;
-	while (++y < HEIGHT)
+	if (data->fractal == MANDELBROT || data->fractal == JULIA)
 	{
-		x = -1;
-		while (++x < WIDTH)
+		while (++y < HEIGHT)
 		{
-			pixel_iter(data, x, y);
+			x = -1;
+			while (++x < WIDTH)
+			{
+				pixel_iter(data, x, y);
+			}
 		}
 	}
 	mlx_put_image_to_window(data->mlx, data->win, data->imgd.img, 0, 0);

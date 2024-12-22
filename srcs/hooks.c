@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 17:58:14 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 18:12:28 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	key_press(int keycode, t_data *data)
 	if (keycode == XK_Escape)
 		free_data(data);
 	else if (keycode == XK_Right)
-		shift_right(data);
+		shift_x(data, 1);
 	else if (keycode == XK_Left)
-		shift_left(data);
+		shift_x(data, -1);
 	else if (keycode == XK_Up)
-		shift_down(data);
+		shift_y(data, -1);
 	else if (keycode == XK_Down)
-		shift_up(data);
+		shift_y(data, 1);
 	else if (keycode == XK_plus || keycode == XK_equal)
 		data->iter_ceil += 50;
 	else if (keycode == XK_minus)
