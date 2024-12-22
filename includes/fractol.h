@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/22 21:03:42 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 21:46:42 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ enum			e_fractal
 {
 	MANDELBROT,
 	JULIA,
-	NOVA
+	BEETLE
 };
 
 enum			e_pallet
@@ -80,7 +80,7 @@ void			fractal_render(t_data *data);
 void			my_pixel_put(int x, int y, t_img *img, int color);
 /* fractal types, iteritave and newton */
 void			pixel_iter(t_data *data, int x, int y);
-void			pixel_newton(t_data *data, int x, int y);
+void			pixel_beetle(t_data *data, int x, int y);
 /*color*/
 unsigned int	interpolate_color(double t, unsigned int c1, unsigned int c2);
 unsigned int	get_color(double t, t_data *data);
