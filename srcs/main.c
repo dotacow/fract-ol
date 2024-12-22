@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 19:02:30 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 18:48:37 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 19:18:57 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		errno = EINVAL;
-		perror("Usage: ./fractol mandelbrot");
-		perror("fractol julia [real] [imaginary]");
+		perror("Usage: ./fractol mandelbrot OR julia <real> <imaginary>");
 		exit(EXIT_FAILURE);
 	}
 }
