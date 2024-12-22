@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/21 19:12:19 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/22 17:58:14 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,7 @@ void			shift_left(t_data *data);
 void			shift_right(t_data *data);
 void			shift_up(t_data *data);
 void			shift_down(t_data *data);
+void			zoom_in(t_data *data, int x, int y);
+void			zoom_out(t_data *data, int x, int y);
 
 #endif

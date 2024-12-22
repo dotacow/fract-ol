@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 19:25:24 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/22 18:03:20 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	pixel_iter(t_data *data, int x, int y)
 	double	i;
 	double	temp_x;
 
-	z.x = lin_intrp(x, data->xl1, data->xl2, WIDTH) / data->zoom;
-	z.y = lin_intrp(y, data->yl2, data->yl1, HEIGHT) / data->zoom;
+	z.x = lin_intrp(x, data->xl1, data->xl2, WIDTH);
+	z.y = lin_intrp(y, data->yl2, data->yl1, HEIGHT);
 	c.x = 0;
 	c.y = 0;
 	pick_fractal(data, &c, &z);

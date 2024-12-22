@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hooks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 18:53:38 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/22 17:58:14 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,10 @@ int	key_press(int keycode, t_data *data)
 
 int	mouse_press(int button, int x, int y, t_data *data)
 {
-	(void)(x+ y);
 	if (button == 5)
-		data->zoom *= 1.5;
+		zoom_in(data, x, y);
 	else if (button == 4)
-		data->zoom /= 1.5;
+		zoom_out(data, x, y);
 	fractal_render(data);
 	return (0);
 }
