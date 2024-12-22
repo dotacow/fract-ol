@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 19:43:28 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 20:58:39 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,13 @@ int	mouse_press(int button, int x, int y, t_data *data)
 		zoom_in(data, x, y);
 	else if (button == 4)
 		zoom_out(data, x, y);
+	if (button == 1)
+	{
+		if (data->pallet == RAINBOW)
+			data->pallet = MAGMA;
+		else
+			data->pallet = RAINBOW;
+	}
 	fractal_render(data);
 	return (0);
 }

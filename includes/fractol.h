@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/22 19:29:59 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 21:03:42 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <errno.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <math.h>
 
 # define WIDTH 800
 # define HEIGHT 800
@@ -46,12 +47,20 @@ typedef struct s_cnum
 enum			e_fractal
 {
 	MANDELBROT,
-	JULIA
+	JULIA,
+	NOVA
+};
+
+enum			e_pallet
+{
+	MAGMA,
+	RAINBOW
 };
 
 typedef struct s_data
 {
 	int			fractal;
+	int			pallet;
 	void		*mlx;
 	void		*win;
 	t_img		imgd;
@@ -71,9 +80,12 @@ void			fractal_render(t_data *data);
 void			my_pixel_put(int x, int y, t_img *img, int color);
 /* fractal types, iteritave and newton */
 void			pixel_iter(t_data *data, int x, int y);
+void			pixel_newton(t_data *data, int x, int y);
 /*color*/
 unsigned int	interpolate_color(double t, unsigned int c1, unsigned int c2);
-unsigned int	get_color(double t);
+unsigned int	get_color(double t, t_data *data);
+unsigned int	get_color_magma(double t);
+unsigned int	get_color_rainbow(double t);
 /*🤓*/
 double			lin_intrp(double transform, double l1, double l2, double res);
 double			atodbl(char *s);

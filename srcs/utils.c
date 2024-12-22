@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 20:54:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 19:44:40 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/22 20:59:40 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,27 @@ unsigned int	interpolate_color(double t, unsigned int c1, unsigned int c2)
 	return ((r << 16) | (g << 8) | b);
 }
 
-unsigned int	get_color(double t)
+unsigned int	get_color_magma(double t)
+{
+	int					cindex;
+	int					idx1;
+	int					idx2;
+	double				pixel;
+	const unsigned int	colors[] = {MIDNIGHT_BLACK, DEEP_NAVY, DARK_INDIGO,
+		ROYAL_PURPLE, PLUM, VIOLET,
+		MAUVE, CRIMSON, RUBY_RED, SCARLET, SUNSET_ORANGE, CORAL,
+		PEACH, APRICOT, LIGHT_GOLD, PALE_YELLOW};
+
+	cindex = sizeof(colors) / sizeof(colors[0]);
+	idx1 = (int)(t * (cindex - 1));
+	idx2 = idx1 + 1;
+	if (idx2 >= cindex)
+		idx2 = cindex - 1;
+	pixel = (t * (cindex - 1)) - idx1;
+	return (interpolate_color(pixel, colors[idx1], colors[idx2]));
+}
+
+unsigned int	get_color_rainbow(double t)
 {
 	int					cindex;
 	int					idx1;
@@ -64,4 +84,12 @@ unsigned int	get_color(double t)
 		idx2 = cindex - 1;
 	pixel = (t * (cindex - 1)) - idx1;
 	return (interpolate_color(pixel, colors[idx1], colors[idx2]));
+}
+
+unsigned int	get_color(double t, t_data *data)
+{
+	if (data->pallet == RAINBOW)
+		return (get_color_rainbow(t));
+	else
+		return (get_color_magma(t));
 }

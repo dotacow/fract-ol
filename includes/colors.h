@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 20:10:38 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/21 18:43:33 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/22 20:47:31 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef COLORS_H
 # define COLORS_H
 
-# define BLACK			0x000000
 # define WHITE			0xFFFFFF
 # define RED			0xFF0000
 # define GREEN			0x00FF00
@@ -51,7 +50,24 @@
 # define MEDIUM_PURPLE   0x6B1A82
 # define LIGHT_RED       0xCE496D
 # define BLACK           0x000000
+/* magma color pallete */
 # define NIGHT_BLUE      0x030412
 # define LIGHT_PINK      0xD95269
+# define MIDNIGHT_BLACK  0x000004
+# define DEEP_NAVY       0x0C0927
+# define DARK_INDIGO     0x231151
+# define ROYAL_PURPLE    0x410F75
+# define PLUM            0x5F187F
+# define VIOLET          0x7B2382
+# define MAUVE           0x982D80
+# define CRIMSON         0xB63679
+# define RUBY_RED        0xD3436E
+# define SCARLET         0xEB5760
+# define SUNSET_ORANGE   0xF8765C
+# define CORAL           0xFD9A6A
+# define PEACH           0xFEBF84
+# define APRICOT         0xFDDC9E
+# define LIGHT_GOLD      0xFCF2B0
+# define PALE_YELLOW     0xFCFDBF
 
 #endif
