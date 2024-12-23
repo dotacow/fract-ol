@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 17:23:51 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 22:02:13 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/23 10:49:51 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	pixel_iter(t_data *data, int x, int y)
 		if ((z.x * z.x + z.y * z.y) > data->escape_val * data->escape_val)
 		{
 			my_pixel_put(x, y, &data->imgd,
-				get_color(i / data->iter_ceil, data));
+				get_color(i / data->sharpness, data));
 			return ;
 		}
 		i++;
@@ -77,7 +77,7 @@ void	pixel_beetle(t_data *data, int x, int y)
 		if ((z.x * z.x + z.y * z.y) > data->escape_val * data->escape_val)
 		{
 			my_pixel_put(x, y, &data->imgd,
-				get_color(i / data->iter_ceil, data));
+				get_color(i / data->sharpness, data));
 			return ;
 		}
 		i++;

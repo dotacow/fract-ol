@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 21:46:42 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/23 10:55:32 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	data_init(t_data *data, char **argv)
 {
 	data->iter_ceil = ITER_CEIL;
-	data->escape_val = 42;
+	data->escape_val = ESCAPE_VAL;
 	data->xl1 = -2.00;
 	data->xl2 = 2.00;
 	data->yl1 = 2.00;
@@ -33,6 +33,7 @@ static void	data_init(t_data *data, char **argv)
 		data->z.y = 0.00;
 	}
 	data->pallet = RAINBOW;
+	data->sharpness = 256;
 }
 
 void	fractal_init(t_data *data, char **argv)

@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/22 21:46:42 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/23 11:34:45 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,12 @@
 # include "mlx.h"
 # include <X11/X.h>
 # include <X11/keysym.h>
-# include <errno.h>
 # include <stdio.h>
-# include <unistd.h>
-# include <math.h>
 
-# define WIDTH 800
+# define WIDTH	800
 # define HEIGHT 800
-# define ITER_CEIL 512
+# define ITER_CEIL 556
+# define ESCAPE_VAL 42
 # define ZOOM 1.5
 
 // image data
@@ -71,6 +69,7 @@ typedef struct s_data
 	double		yl1;
 	double		yl2;
 	t_cnum		z;
+	double		sharpness;
 }				t_data;
 /*Initi and error handling*/
 void			fractal_init(t_data *data, char **argv);

@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:15:36 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/22 20:58:39 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/23 11:33:42 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ int	key_press(int keycode, t_data *data)
 		data->iter_ceil += 50;
 	else if (keycode == XK_minus)
 		data->iter_ceil -= 50;
+	else if (keycode == XK_s || keycode == XK_S)
+	{
+		if (data-> sharpness < 2048)
+			data->sharpness += 10;
+	}
+	else if (keycode == XK_d || keycode == XK_D)
+		if (data-> sharpness > 50)
+			data->sharpness -= 10;
 	fractal_render(data);
 	return (0);
 }
