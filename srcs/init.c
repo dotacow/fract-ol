@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 16:55:31 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/23 10:55:32 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/23 11:48:02 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,6 @@ static void	data_init(t_data *data, char **argv)
 	{
 		data->z.x = atodbl(argv[2]);
 		data->z.y = atodbl(argv[3]);
-	}
-	else if (data->fractal == BEETLE)
-	{
-		data->z.x = 1.00;
-		data->z.y = 0.00;
 	}
 	data->pallet = RAINBOW;
 	data->sharpness = 256;

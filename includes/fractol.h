@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 00:30:31 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/23 11:34:45 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/12/23 11:44:40 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include <X11/keysym.h>
 # include <stdio.h>
 
-# define WIDTH	800
+# define WIDTH 800
 # define HEIGHT 800
 # define ITER_CEIL 556
 # define ESCAPE_VAL 42
